@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+h1
+{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+ /* background-image: url(todolist_2.jpg);
+  background-size: cover;*/
+  background:linear-gradient(rgb(120, 126, 241),rgb(115, 115, 252)) ;
+}
+
+.Container{
+  max-width: 500px;
+  padding: 23px;
+  margin: 137px auto;
+  background: #fff;
+  border-radius: 5px;
+}
+.taskInput{
+  height: 52px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.taskInput input{
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 0 15px 0 40PX;
+  border: 1px solid rgb(12, 12, 12);
+}
+.taskInput input:focus,
+.taskInput input.active{
+  padding-left: 52px;
+  border: 2px solid #6e85aa;
+}
+.taskInput input::placeholder{
+  color:rgb(121, 115, 115);
+}
+.controls, li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls{
+  padding: 18px 25px;
+  border-bottom: 1px solid rgb(234, 212, 212);
+}
+.filters span{
+  margin: 0 8px;
+  font-size: 17px;
+  color: #d6adad;
+  cursor: pointer;
+}
+.filters span:first-child{
+  margin-left: 0;
+}
+.filters span.active{
+  color: #8ba8d5;
+}
+.controls .deleteBtn{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+  background: linear-gradient( #3291da , #1c43d1 );
+}
+.deleteBtn.active{
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.deleteBtn:active{
+  transform: scale(0.93);
+}
+.taskBox{
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+}
+.taskBox.overflow{
+  overflow-y: auto;
+  max-height: 300px;
+}
+.taskBox::-webkit-scrollbar{
+  width: 5px;
+}
+.taskBox::-webkit-scrollbar-track{
+  background: #f7d9d9;
+  border-radius: 25px;
+}
+.taskBox::-webkit-scrollbar-thumb{
+  background: #af9898;
+  border-radius: 25px;
+}
+.taskBox .task{
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+}
+.taskBox .task:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.taskBox .task label{
+  display: flex;
+  align-items: flex-start;
+}
+.task label input{
+  margin-top: 7px;
+  accent-color: #3C87FF;
+}
+.task label p{
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+.task label p.checked{
+  text-decoration: line-through;
+}
+.taskBox .settings{
+  position: relative;
+}
+.settings :where(i, li){
+  cursor: pointer;
+}
+.settings .taskMenu{
+  z-index: 10;
+  right: -5px;
+  bottom: -65px;
+  padding: 5px 0;
+  background: rgb(198, 181, 181);
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: top right;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+.taskBox .task:last-child .taskMenu{
+  bottom: 0;
+  transform-origin: bottom right;
+}
+.taskBox .task:first-child .taskMenu{
+  bottom: -65px;
+  transform-origin: top right;
+}
+.taskMenu.show{
+  transform: scale(1);
+}
+.taskMenu li{
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+.taskMenu li:last-child{
+  margin-bottom: 0;
+}
+.settings li:hover{
+  background: #deb0b0;
+}
+.settings li i{
+  padding-right: 8px;
+}
+
+@media (max-width: 400px) {
+  body{
+    padding: 0 10px;
+  }
+  .Container {
+    padding: 20px 0;
+  }
+  .filters span{
+    margin: 0 5px;
+  }
+  .taskInput{
+    padding: 0 20px;
+  }
+  .controls{
+    padding: 18px 20px;
+  }
+  .taskBox{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 15px 10px 20px;
+  }
+  .task label input{
+    margin-top: 4px;
+  }
+}
+.add
+{
+        float: right;
+        background: crimson;
+        padding: 4px 5px;
+        color: aliceblue;
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        margin:2px;
+        text-align: center;
+        width: 20%;
+    
+}

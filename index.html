@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="task.js"></script>
+  <title>To-Do App</title>
+</head>
+<body>
+  <main class="flex items-center justify-center h-screen bg-blue-300">
+    <form onsubmit="return submitForm(event)" action="ToDoApp.html" method="post">
+        <div class="bg-white w-96 p-6 rounded shadow-sm">
+            <div class="flex items-center justify-center mb-4">
+                <img src="todolist3.jpg" class="h-15 "/>
+            </div>
+            <label class="text-black-700">Email</label>
+            <input class="w-full py-2 bg-gray-50 
+            text-gray-500 px-1
+             outline-none mb-4" type="email" 
+             placeholder="Enter Your Mail" id="email"/>
+            <label class="text-black-700">Password</label>
+            <input class="w-full py-2 bg-gray-50 
+            text-gray-500 px-1 outline-none mb-4" type="password"
+             placeholder="Enter Your Password" id="password"/>
+            <input class="mb-4" type="checkbox" id="remember"/>
+            <label for="remember" class="text-gray-700">Remember Me</label>
+            <button type="submit" class="bg-blue-500 w-full 
+            text-gray-100 py-2 rounded hover:bg-blue-600 
+            transition-colors" >Login</button>
+            <button type="submit" class="bg-blue-500 w-full 
+            text-gray-100 py-2 mt-2 rounded hover:bg-blue-600 
+            transition-colors" >Logout</button>
+        </div>
+    </form>
+  </main>
+</body>
+</html>

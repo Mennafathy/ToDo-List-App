@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">  
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="stylescss.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  </head>
+  <body>
+    <header>
+        <h1>
+            ToDo List App
+        </h1>
+    </header>
+    <div class="Container">
+      <div class="taskInput">
+        <input type="text" placeholder="What You Planned To Do?" autofocus>
+        <input type="submit" value="Add Task" class="add">
+
+      </div>
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="finished">Finished</span>
+        </div>
+        <button class="deleteBtn">Delete</button>
+      </div>
+      <ul class="taskBox"></ul>
+    </div>
+
+    <script src="task.js"></script>
+
+  </body>
+</html>
